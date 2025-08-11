@@ -11,15 +11,15 @@ async function main() {
   })
 
   const stdioTransport= new StdioClientTransport({
-    // command: "npx",
-    // args:  [
-    //   "-y",
-    //   "hacker-news-server"
-    // ]
-    command: "node",
+    command: "npx",
     args:  [
-      "../server/dist/index.js"
+      "-y",
+      "hacker-news-server"
     ]
+    // command: "node",
+    // args:  [
+    //   "../server/dist/index.js"
+    // ]
   })
   await client.connect(stdioTransport)
 
