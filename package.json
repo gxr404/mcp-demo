@@ -9,8 +9,9 @@
     "clean:build": "pnpm -r exec rm -rf dist",
     "clean:deps": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "test": "vitest --run",
-    "version-patch": "pnpm -r exec pnpm version patch",
-    "publish": "pnpm publish -r --dry-run --filter './packages/**'"
+    "version-patch": "pnpm -r exec pnpm version patch && git add packages/*/package.json && git commit -m 'chore: bump version'",
+    "publish": "pnpm publish -r --filter './packages/**'",
+    "release:path": "pnpm run version-patch && pnpm run publish"
   },
   "keywords": [],
   "author": "",
