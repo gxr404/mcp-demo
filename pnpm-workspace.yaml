@@ -1,0 +1,11 @@
+packages:
+  - packages/*
+  - "!**/test/**"
+catalog:
+  "@modelcontextprotocol/sdk": ^1.17.0
+  "@types/node": ^24.1.0
+  bun: ^1.2.19
+  typescript: ^5.8.3
+  vitest: ^3.2.4
+  vue: ^3.5.18
+  zod: ^4.0.10

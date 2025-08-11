@@ -1,0 +1,25 @@
+{
+  "name": "hacker-news-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "hacknews-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "catalog:",
+    "hacker-news-fetch": "workspace:^",
+    "zod": "catalog:"
+  }
+}
