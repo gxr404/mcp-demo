@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "bin": {
-    "hacker-news-server": "./dist/index.js"
+    "hacker-news-server": "./bin/index.js"
   },
   "scripts": {
     "build": "tsc"
