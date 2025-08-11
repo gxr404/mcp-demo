@@ -8,7 +8,9 @@
     "clean": "pnpm run '/^clean:.*/'",
     "clean:build": "pnpm -r exec rm -rf dist",
     "clean:deps": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "version-patch": "pnpm -r exec pnpm version patch",
+    "publish": "pnpm publish -r --dry-run --filter './packages/**'"
   },
   "keywords": [],
   "author": "",
