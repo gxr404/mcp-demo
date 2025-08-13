@@ -19,8 +19,8 @@ catalogs:
       specifier: ^5.8.3
       version: 5.9.2
     zod:
-      specifier: ^4.0.10
-      version: 4.0.15
+      specifier: ^3.25.76
+      version: 3.25.76
 
 importers:
 
@@ -37,7 +37,7 @@ importers:
         version: 1.17.2
       zod:
         specifier: 'catalog:'
-        version: 4.0.15
+        version: 3.25.76
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -71,7 +71,7 @@ importers:
         version: link:../hacker_news
       zod:
         specifier: 'catalog:'
-        version: 4.0.15
+        version: 3.25.76
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -461,7 +461,6 @@ packages:
 
   bun@1.2.19:
     resolution: {integrity: sha512-P70KUfH9cvgcl8Hjvamr98NinEatV23yX6qaY7z1+3rBPdds0oVX0u6FfrYnWc8F3ayFQ4do6/6xBLWY4itJkQ==}
-    cpu: [arm64, x64, aarch64]
     os: [darwin, linux, win32]
     hasBin: true
 
@@ -997,9 +996,6 @@ packages:
 
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
-
-  zod@4.0.15:
-    resolution: {integrity: sha512-2IVHb9h4Mt6+UXkyMs0XbfICUh1eUrlJJAOupBHUhLRnKkruawyDddYRCs0Eizt900ntIMk9/4RksYl+FgSpcQ==}
 
 snapshots:
 
@@ -1841,5 +1837,3 @@ snapshots:
       zod: 3.25.76
 
   zod@3.25.76: {}
-
-  zod@4.0.15: {}

@@ -1,4 +1,4 @@
-import type { AllTypeItem, UserInfo } from "./types/api"
+import type { AllTypeItem, StoryItem, UserInfo } from "./types/api"
 
 
 const HOST = 'https://hacker-news.firebaseio.com/v0'
@@ -104,7 +104,7 @@ export const fetchFnMap = new Map([
   // [FetchType.MaxItem, getMaxItem],
 ])
 
-export async function getItemList(type: FetchType, page = 1, pageSize = 10) {
+export async function getItemList(type: FetchType, page = 1, pageSize = 30) {
   if (!type) return []
   const fetchFn = fetchFnMap.get(type)
   if (!fetchFn) return []
@@ -126,4 +126,14 @@ export async function getItemList(type: FetchType, page = 1, pageSize = 10) {
   const pList = pageIdList.map((id) => getItem(String(id)))
 
   return Promise.all(pList)
+}
+
+
+export async function getItemListMd(type: FetchType, page = 1, pageSize = 30) {
+  const list = await getItemList(type, page, pageSize)
+  const header  = `# ${type} Stories\n\n`
+  const content = list.map((item) => {
+    return `- [${item.by}]: [${(item as StoryItem)?.title || item?.text}](${(item as StoryItem)?.url})`
+  }).join('\n')
+  return `${header}${content}\n\n`
 }
